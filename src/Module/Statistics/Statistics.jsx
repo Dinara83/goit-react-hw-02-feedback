@@ -1,8 +1,9 @@
+import PropTypes from "prop-types";
 import css from'../App.module.css';
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => 
 (
-  <div className={css.btnBlock}>
+  <div >
     <p className={css.statisticValue}>Good: {good}</p>
     <p className={css.statisticValue}>Neutral: {neutral}</p>
     <p className={css.statisticValue}>Bad: {bad}</p>
@@ -12,3 +13,11 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) =>
 );
 
 export default Statistics;
+
+Statistics.prototype = {
+	good: PropTypes.number.isRequired, 
+	neutral: PropTypes.number.isRequired, 
+	bad: PropTypes.number.isRequired,
+	total: PropTypes.number.isRequired,
+    positivePercentage: PropTypes.number.isRequired,
+}
