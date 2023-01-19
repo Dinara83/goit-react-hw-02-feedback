@@ -1,15 +1,17 @@
+import css from '../App.module.css';
+
 const FeedbackOptions = ({ onLeaveFeedback }) => (
-  <>
-    <button type="button" onClick={() => onLeaveFeedback('good')}>
+  <div className={css.btnBlock}>
+    <button className={css.btn} type="button" onClick={() => onLeaveFeedback('good')}>
       Good
     </button>
-    <button type="button" onClick={() => onLeaveFeedback('neutral')}>
+    <button className={css.btn} type="button" onClick={() => onLeaveFeedback('neutral')}>
       Neutral
     </button>
-    <button type="button" onClick={() => onLeaveFeedback('bad')}>
+    <button className={css.btn} type="button" onClick={() => onLeaveFeedback('bad')}>
       Bad
     </button>
-  </>
+  </div>
 );
 
 export default FeedbackOptions;

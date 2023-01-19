@@ -1,20 +1,28 @@
 .title {
 	font-size: 24px;
-}
-
-.wrapper {
-	display: block;
-	align-items: center;
-	margin: 20 auto;
+	margin: 0 0 20px;
 }
 
 .block {
-	border: 1px solid;
-	border-radius: 5px;
+	margin: 0;
 	padding: 15px;
+	font-weight: bolt;
+}
 
-	&Title {
-		margin-top: 0;
-		margin-bottom: 15px;
-	}
+.btnBlock {
+	margin: 5px;
+}
+
+.btn {
+	font-size: 12px;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	margin-right: 5px;
+	background-color: white;
+	box-shadow: 0.2px 1px 2px 0.1px gray;
+}
+
+.statisticValue {
+	font-size: 16px;
 }

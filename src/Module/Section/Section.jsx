@@ -1,7 +1,10 @@
+import css from '../App.module.css';
+
+
 function Section({ children, title }) {
   return (
-    <div className="feedback">
-      <h1 className="feedback__offer">{title}</h1>
+    <div className={css.block}>
+      <h1 className={css.title}>{title}</h1>
       {children}
     </div>
   );

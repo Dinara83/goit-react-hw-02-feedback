@@ -1,5 +1,4 @@
 @import-normalize; /* bring in normalize.css styles */
-@import "../src/Module/shared/styles/_reset.scss";
 
 body {
 	margin: 0;
