@@ -1,5 +1,4 @@
-import css from '../App.module.css';
-
+import css from './Section.module.css';
 
 function Section({ children, title }) {
   return (
