@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import './App.module.css';
+
 import Section from './Section/Section';
 import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Statistics from './Statistics/Statistics';
 import Notification from './Statistics/Notification';
 
-// const keyOptions = ['good', 'neutral', 'bad'];
+import './App.module.css';
+
 class App extends Component {
   state = {
     good: 0,
