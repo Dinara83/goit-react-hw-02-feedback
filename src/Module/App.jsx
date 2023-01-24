@@ -5,7 +5,7 @@ import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Statistics from './Statistics/Statistics';
 import Notification from './Statistics/Notification';
 
-const keyOptions = ['good', 'neutral', 'bad'];
+// const keyOptions = ['good', 'neutral', 'bad'];
 class App extends Component {
   state = {
     good: 0,
@@ -36,20 +36,23 @@ class App extends Component {
   }
 
   render() {
+    const { good, neutral, bad } = this.state;
+    const options = Object.keys(this.state);
+
     return (
       <>
         <Section title="Please leave feedback">
           <FeedbackOptions
-            options={keyOptions}
+            options={options}
             onLeaveFeedback={this.onLeaveFeedback}
           />
         </Section>
         <Section title={`Statistics`}>
           {this.countTotalFeedback() > 0 ? (
             <Statistics
-              good={this.state.good}
-              neutral={this.state.neutral}
-              bad={this.state.bad}
+              good={good}
+              neutral={neutral}
+              bad={bad}
               total={this.countTotalFeedback()}
               positivePercentage={this.countPositiveFeedbackPercentage()}
             />
