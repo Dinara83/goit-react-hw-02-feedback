@@ -31,8 +31,8 @@ class App extends Component {
     if (!total) {
       return 0;
     }
-    const value = this.state.good + this.state.neutral;
-    const result = ((value / total) * 100).toFixed(2);
+    const {good} = this.state;
+    const result = ((good / total) * 100).toFixed(2)
     return Number(result);
   }
 
